@@ -11,4 +11,8 @@
         <extension priority="1.0">groovy,gvy,gy,gsh</extension>
     </detectors>
     
+    <tree-sitter>
+        <highlights />
+    </tree-sitter>
+    
 </syntax>

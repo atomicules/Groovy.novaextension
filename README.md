@@ -1,4 +1,5 @@
-**Groovy** is (at the current time) a rough and ready [Nova extension](https://extensions.panic.com/) for the [Groovy](http://www.groovy-lang.org) programming language
+**Groovy** is (at the current time) a rough and ready [Nova extension](https://extensions.panic.com/) for the [Groovy](http://www.groovy-lang.org) programming language. It basically does nothing beyond package up [other people's good work](#Credits) into a Nova extension.
+
 <!--
 🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
 -->
@@ -36,3 +37,18 @@ You can also configure preferences on a per-project basis in **Project → Proje
 ### Developing
 
 This extension bundles in the [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server). That will need updating periodically. Follow their README instructions to update the jar.
+
+It's using tree-sitter since that is the preferred approach in Nova now. There look to be a few options now (although [very recently weren't any](https://github.com/tree-sitter/tree-sitter/discussions/1274)):
+
+- [Decodetalkers/tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy)
+- [codieboomboom/tree-sitter-groovy](https://github.com/codieboomboom/tree-sitter-groovy)
+- [evolighting/tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy)
+
+I went for [Decodetalkers/tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy) because it has a `highlights.scm` which at least works as a starter.
+
+The dylib will have to be [re-built](https://docs.nova.app/syntax-reference/tree-sitter/#compiling-a-parser) periodically per the Nova docs.
+
+### Credits
+
+- [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server)
+- [tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy)
