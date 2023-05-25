@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="groovy">
+    <meta>
+        <name>Groovy</name>
+        <type>script</type>
+        <preferred-file-extension>groovy</preferred-file-extension>
+        <scriptable shebang="#!/usr/bin/env groovy" />
+    </meta>
+    
+    <detectors>
+        <extension priority="1.0">groovy,gvy,gy,gsh</extension>
+    </detectors>
+    
+</syntax>
