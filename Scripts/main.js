@@ -18,7 +18,7 @@ exports.deactivate = function() {
 class GroovyLanguageServer {
     constructor() {
         // Observe the configuration setting for the server's location, and restart the server on change
-        nova.config.observe('example.language-server-path', function(path) {
+        nova.config.observe('groovy.java-binary-path', function(path) {
             this.start(path);
         }, this);
     }

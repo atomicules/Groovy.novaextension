@@ -15,10 +15,10 @@
     
     "config": [
         {
-            "key": "example.language-server-path",
-            "title": "Language Server Path",
+            "key": "groovy.java-path",
+            "title": "Java Binary Path",
             "type": "path",
-            "placeholder": "/usr/local/bin/example"
+            "placeholder": "/usr/bin/java"
         }
     ]
 }
