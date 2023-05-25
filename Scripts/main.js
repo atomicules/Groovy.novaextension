@@ -3,7 +3,7 @@ var langserver = null;
 
 exports.activate = function() {
     // Do work when the extension is activated
-    langserver = new ExampleLanguageServer();
+    langserver = new GroovyLanguageServer();
 }
 
 exports.deactivate = function() {
@@ -15,7 +15,7 @@ exports.deactivate = function() {
 }
 
 
-class ExampleLanguageServer {
+class GroovyLanguageServer {
     constructor() {
         // Observe the configuration setting for the server's location, and restart the server on change
         nova.config.observe('example.language-server-path', function(path) {
@@ -26,7 +26,7 @@ class ExampleLanguageServer {
     deactivate() {
         this.stop();
     }
-    
+
     start(path) {
         if (this.languageClient) {
             this.languageClient.stop();
@@ -35,23 +35,29 @@ class ExampleLanguageServer {
         
         // Use the default server path
         if (!path) {
-            path = '/usr/local/bin/example';
+            path = '/usr/bin/java' ;
         }
-        
+
         // Create the client
         var serverOptions = {
-            path: path
+            path: path,
+            args: ['-jar', nova.path.join(nova.extension.path, 'Scripts/server/groovy-language-server-all.jar')]
         };
+
         var clientOptions = {
             // The set of document syntaxes for which the server is valid
-            syntaxes: ['javascript']
+            syntaxes: ['groovy'],
+            debug: true
         };
-        var client = new LanguageClient('example-langserver', 'Example Language Server', serverOptions, clientOptions);
+        var client = new LanguageClient('groovy-langserver', 'Groovy Language Server', serverOptions, clientOptions);
         
         try {
             // Start the client
             client.start();
             
+            if (nova.inDevMode()) {
+                console.log("Starting Groovy language server");
+            }
             // Add the client to the subscriptions to be cleaned up
             nova.subscriptions.add(client);
             this.languageClient = client;
@@ -67,6 +73,10 @@ class ExampleLanguageServer {
     
     stop() {
         if (this.languageClient) {
+            if (nova.inDevMode()) {
+                // TODO: Why doesn't this log?
+                console.log("Stopping Groovy language server");
+            }
             this.languageClient.stop();
             nova.subscriptions.remove(this.languageClient);
             this.languageClient = null;

@@ -2,12 +2,12 @@
     "identifier": "uk.co.atomicules.groovy",
     "name": "Groovy",
     "organization": "atomicules",
-    "description": "Lorem ipsum, dolor sit amet.",
+    "description": "Groovy language server extension.",
     "version": "1.0",
     "categories": ["languages"],
     
     "main": "main.js",
-    
+
     "entitlements": {
         "process": true,
         "filesystem": "readonly"
