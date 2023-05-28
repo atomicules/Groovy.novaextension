@@ -1,27 +1,27 @@
 (unit
-  (identifier) @variable)
+  (identifier) @identifier.variable)
 (string
-  (identifier) @variable)
+  (identifier) @identifier.variable)
 
 (escape_sequence) @string.escape
 
 (block
   (unit
-    (identifier) @namespace
+    (identifier) @declaration
   )
 )
 
 (func
-  (identifier) @function
+  (identifier) @identifier.function
 )
 
-(number) @number
+(number) @value.number
 
-((identifier) @boolean
-  (#any-of? @boolean "true" "false" "True" "False"))
+((identifier) @value.boolean
+  (#any-of? @value.boolean "true" "false" "True" "False"))
 
-((identifier) @constant
-  (#lua-match? @constant "^[A-Z][A-Z%d_]*$"))
+((identifier) @identifier.constant
+  (#lua-match? @identifier.constant "^[A-Z][A-Z%d_]*$"))
 
 ((identifier) @type.definition
   (#any-of? @type.definition
@@ -37,13 +37,14 @@
     "debugImplementation")
 )
 
-((identifier) @keyword
-  (#any-of? @keyword
+((identifier) @keyword.construct
+  (#any-of? @keyword.construct
     "static"
     "class"
     "def"
     "import"
     "new"
+    "package"
 ))
 
 (string) @string
@@ -53,4 +54,4 @@
 (operators) @operator
 (leading_key) @operator
 
-["(" ")" "[" "]" "{" "}"]  @punctuation.bracket
+["(" ")" "[" "]" "{" "}"]  @bracket
