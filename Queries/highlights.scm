@@ -1,3 +1,4 @@
+; This is hitting all the package, class, def stuff:
 (unit
   (identifier) @identifier.variable)
 (string
@@ -30,11 +31,7 @@
     "void"
     "id"
     "version"
-    "apply"
-    "implementation"
-    "testImplementation"
-    "androidTestImplementation"
-    "debugImplementation")
+    "apply")
 )
 
 ((identifier) @keyword.construct
@@ -49,7 +46,8 @@
 
 (string) @string
 
-(comment) @comment
+(line_comment) @comment
+(block_comment) @comment
 
 (operators) @operator
 (leading_key) @operator
