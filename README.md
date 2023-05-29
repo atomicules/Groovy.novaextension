@@ -46,7 +46,13 @@ It's using tree-sitter since that is the preferred approach in Nova now. There l
 
 I went for [Decodetalkers/tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy) because it has a `highlights.scm` which at least works as a starter.
 
-The dylib will have to be [re-built](https://docs.nova.app/syntax-reference/tree-sitter/#compiling-a-parser) periodically per the Nova docs.
+The dylib will have to be [re-built](https://docs.nova.app/syntax-reference/tree-sitter/#compiling-a-parser) periodically per the Nova docs, e.g:
+
+```
+tree-sitter generate
+./compile_parser.sh ./ /Applications/Nova.app/
+cp libtree-sitter-groovy.dylib /path/to/this/Groovy.novaextension/Syntaxes/libtree-sitter-groovy.dylib
+```
 
 ### Credits
 
