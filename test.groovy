@@ -28,7 +28,7 @@ class MvcDemo {
 	
 	def frame
 	def swing
-	
+	// Add a single line comment
 	void run() {
 		swing = new SwingBuilder()
 		
