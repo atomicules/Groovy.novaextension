@@ -74,7 +74,6 @@ class GroovyLanguageServer {
     stop() {
         if (this.languageClient) {
             if (nova.inDevMode()) {
-                // TODO: Why doesn't this log?
                 console.log("Stopping Groovy language server");
             }
             this.languageClient.stop();
