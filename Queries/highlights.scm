@@ -1,9 +1,9 @@
 ; Methods
 
 (method_declaration
-  name: (identifier) @function.method)
+  name: (identifier) @identifier.function)
 (method_invocation
-  name: (identifier) @function.method)
+  name: (identifier) @identifier.function)
 (super) @function.builtin
 
 ; Annotations
@@ -40,7 +40,7 @@
  (#match? @type "^[A-Z]"))
 
 (constructor_declaration
-  name: (identifier) @type)
+  name: (identifier) @identifier.type)
 
 [
   (boolean_type)
@@ -48,14 +48,14 @@
   (floating_point_type)
   (floating_point_type)
   (void_type)
-] @type.builtin
+] @identifier.type
 
 ; Variables
 
-((identifier) @constant
- (#match? @constant "^_*[A-Z][A-Z\\d_]+$"))
+((identifier) @identifier.constant
+ (#match? @identifier.constant "^_*[A-Z][A-Z\\d_]+$"))
 
-(identifier) @variable
+(identifier) @identifier.variable
 
 (this) @variable.builtin
 
@@ -67,7 +67,7 @@
   (octal_integer_literal)
   (decimal_floating_point_literal)
   (hex_floating_point_literal)
-] @number
+] @value.number
 
 [
   (character_literal)
@@ -79,7 +79,7 @@
   (true)
   (false)
   (null_literal)
-] @constant.builtin
+] @identifier.core
 
 [
   (line_comment)
