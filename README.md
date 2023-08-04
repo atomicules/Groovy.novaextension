@@ -44,7 +44,7 @@ It's using tree-sitter since that is the preferred approach in Nova now. There l
 - [codieboomboom/tree-sitter-groovy](https://github.com/codieboomboom/tree-sitter-groovy)
 - [evolighting/tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy)
 
-I went for [Decodetalkers/tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy) because it has a `highlights.scm` which at least works as a starter.
+I've tried all of these in order and so am currently using [evolighting/tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy).
 
 The dylib will have to be [re-built](https://docs.nova.app/syntax-reference/tree-sitter/#compiling-a-parser) periodically per the Nova docs, e.g:
 
@@ -57,4 +57,4 @@ cp libtree-sitter-groovy.dylib /path/to/this/Groovy.novaextension/Syntaxes/libtr
 ### Credits
 
 - [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server)
-- [tree-sitter-groovy](https://github.com/Decodetalkers/tree-sitter-groovy)
+- [tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy)

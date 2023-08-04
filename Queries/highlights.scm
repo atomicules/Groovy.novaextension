@@ -70,7 +70,6 @@
 ] @value.number
 
 [
-  (character_literal)
   (string_literal)
 ] @string
 ;(escape_sequence) @string.escape
@@ -96,6 +95,7 @@
   "catch"
   "class"
   "continue"
+  "def"
   "default"
   "do"
   "else"
