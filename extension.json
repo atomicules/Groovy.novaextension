@@ -4,6 +4,7 @@
     "organization": "atomicules",
     "description": "Groovy language server extension and syntax highlighting.",
     "version": "1.0",
+    "license": "MIT",
     "categories": ["languages"],
     
     "main": "main.js",

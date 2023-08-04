@@ -46,6 +46,8 @@ codesign -s - Syntaxes/libtree-sitter-groovy.dylib
 
 ### Todo
 
+Asides from actually finding time to work on this...
+
 1. Understand Tree-sitter and `highlights.scm`. Try as I might I just don't get them yet.
 2. Maybe tweak whichever tree-sitter-groovy is currently being used, if needed
 3. Tweak `highlights.scm` so it's better
