@@ -9,6 +9,7 @@
     
     <detectors>
         <extension priority="1.0">groovy,gvy,gy,gsh</extension>
+        <filename priority="1.0">Jenkinsfile,JobDSL</filename>
     </detectors>
     
     <tree-sitter>

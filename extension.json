@@ -3,7 +3,7 @@
     "name": "Groovy",
     "organization": "atomicules",
     "description": "Groovy language server extension and syntax highlighting.",
-    "version": "1.0",
+    "version": "1.0.1",
     "license": "MIT",
     "categories": ["languages"],
     
@@ -22,5 +22,9 @@
             "type": "path",
             "placeholder": "/usr/bin/java"
         }
+    ],
+    
+    "activationEvents": [
+        "onWorkspaceContains:*.groovy"
     ]
 }
