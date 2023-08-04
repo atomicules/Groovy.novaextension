@@ -35,9 +35,13 @@ I've tried all of these in order and so am currently using [evolighting/tree-sit
 The dylib will have to be [re-built](https://docs.nova.app/syntax-reference/tree-sitter/#compiling-a-parser) periodically per the Nova docs, e.g:
 
 ```
+cd /path/to/groovy-tree-sitter
+# Copy in the example compile_parser.sh and Makefile provided by Panic
 tree-sitter generate
 ./compile_parser.sh ./ /Applications/Nova.app/
 cp libtree-sitter-groovy.dylib /path/to/this/Groovy.novaextension/Syntaxes/libtree-sitter-groovy.dylib
+cd /path/to/this/Groovy.novaextension/Syntaxes/libtree-sitter-groovy.dylib
+codesign -s - Syntaxes/libtree-sitter-groovy.dylib
 ```
 
 ### Todo

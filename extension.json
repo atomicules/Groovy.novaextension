@@ -2,11 +2,12 @@
     "identifier": "uk.co.atomicules.groovy",
     "name": "Groovy",
     "organization": "atomicules",
-    "description": "Groovy language server extension.",
+    "description": "Groovy language server extension and syntax highlighting.",
     "version": "1.0",
     "categories": ["languages"],
     
     "main": "main.js",
+    "bugs": "https://github.com/atomicules/Groovy.novaextension/issues",
 
     "entitlements": {
         "process": true,
