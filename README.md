@@ -1,4 +1,4 @@
-**Groovy** is (at the current time) a rough and ready [Nova extension](https://extensions.panic.com/) for the [Groovy](http://www.groovy-lang.org) programming language. It basically does nothing beyond package up [other people's good work](#Credits) into a Nova extension.
+**Groovy** is (at the current time) a rough and ready [Nova extension](https://extensions.panic.com/) for the [Groovy](http://www.groovy-lang.org) programming language. It basically does nothing beyond package up [other people's good work](#credits) into a Nova extension.
 
 ![Groovy Nova screenshot](https://raw.githubusercontent.com/atomicules/Groovy.novaextension/main/Images/extension/groovy-nova-screenshot.png)
 
