@@ -61,3 +61,4 @@ I wanted syntax highlighting for working on Jenkins Groovy files. In my naïvety
 
 - [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server)
 - [tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy)
+- [tree-sitter-java](https://github.com/tree-sitter/tree-sitter-java) (I based highlights.scm on [theirs](https://github.com/tree-sitter/tree-sitter-java/blob/master/queries/highlights.scm))
