@@ -1,10 +1,7 @@
 **Groovy** is (at the current time) a rough and ready [Nova extension](https://extensions.panic.com/) for the [Groovy](http://www.groovy-lang.org) programming language. It basically does nothing beyond package up [other people's good work](#Credits) into a Nova extension.
 
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
+![Groovy Nova screenshot](https://raw.githubusercontent.com/atomicules/Groovy.novaextension/main/Images/extension/groovy-nova-screenshot.png)
 
-![](https://nova.app/images/en/dark/editor.png)
 
 ## Requirements
 
@@ -15,26 +12,15 @@ Groovy requires some additional tools to be installed on your Mac:
 
 ## Usage
 
+Groovy runs automatically (syntax highlighting and a language server) on any file identified as Groovy. The language server will report errors and warnings in Nova's **Issues** sidebar and the editor gutter.
 
-<!--
-🎈 Alternatively, if your extension runs automatically (as in the case of a validator), consider showing users what they can expect to see:
--->
-
-Groovy runs any time you open a local project, automatically lints all open files, then reports errors and warnings in Nova's **Issues** sidebar and the editor gutter:
-
-![](https://nova.app/images/en/dark/tools/sidebars.png)
 
 ### Configuration
 
-<!--
-🎈 If your extension offers global- or workspace-scoped preferences, consider pointing users toward those settings. For example:
--->
+There is minimal configuration at the moment. You can set the path the the `java` binary by opening **Extensions → Extension Library...** then selecting Groovy's **Preferences** tab.
 
-To configure global preferences, open **Extensions → Extension Library...** then select Groovy's **Preferences** tab.
 
-You can also configure preferences on a per-project basis in **Project → Project Settings...**
-
-### Developing
+## Developing
 
 This extension bundles in the [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server). That will need updating periodically. Follow their README instructions to update the jar.
 
@@ -54,7 +40,20 @@ tree-sitter generate
 cp libtree-sitter-groovy.dylib /path/to/this/Groovy.novaextension/Syntaxes/libtree-sitter-groovy.dylib
 ```
 
-### Credits
+### Todo
+
+1. Understand Tree-sitter and `highlights.scm`. Try as I might I just don't get them yet.
+2. Maybe tweak whichever tree-sitter-groovy is currently being used, if needed
+3. Tweak `highlights.scm` so it's better
+4. Goto 2, repeat, etc
+
+
+## Motivation
+
+I wanted syntax highlighting for working on Jenkins Groovy files. In my naïvety I didn't realise the Language Server Protocol stuff didn't include syntax highlighting so implemented that needlessly really.
+
+
+## Credits
 
 - [Groovy Language Server](https://github.com/GroovyLanguageServer/groovy-language-server)
 - [tree-sitter-groovy](https://github.com/evolighting/tree-sitter-groovy)
