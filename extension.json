@@ -3,10 +3,10 @@
     "name": "Groovy",
     "organization": "atomicules",
     "description": "Groovy language server extension and syntax highlighting.",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "license": "MIT",
     "categories": ["languages"],
-    
+
     "main": "main.js",
     "bugs": "https://github.com/atomicules/Groovy.novaextension/issues",
 
@@ -14,16 +14,21 @@
         "process": true,
         "filesystem": "readonly"
     },
-    
+
     "config": [
         {
-            "key": "groovy.java-path",
+            "key": "groovy.java-binary-path",
             "title": "Java Binary Path",
             "type": "path",
             "placeholder": "/usr/bin/java"
+        },
+        {   "key": "groovy.lsp-enabled",
+            "title": "Enable the language server?",
+            "type": "boolean",
+            "default": true 
         }
     ],
-    
+
     "activationEvents": [
         "onWorkspaceContains:*.groovy"
     ]
